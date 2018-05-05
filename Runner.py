@@ -9,7 +9,6 @@ __table = JTable()
 
 def main():
 
-    baseAuth = HTTPBasicAuth('taras', 'werthrb')
     response = authToJira('https://charmtech.atlassian.net/rest/api/2/search?jql=filter=14202', baseAuth)
     items = getItemList(response.json())
     __table.setItems(items)
